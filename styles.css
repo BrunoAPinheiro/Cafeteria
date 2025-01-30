@@ -266,3 +266,143 @@ section {
         height: 90%;
     }
 }
+
+@media (max-width: 430px) {
+    /* Ajuste da altura do cabeçalho para que os itens não fiquem amontoados */
+    .header {
+        padding: 0.5rem 1rem;
+    }
+
+    .header section {
+        display: flex;
+        align-items: center; /* Centraliza o conteúdo */
+        justify-content: space-between;
+        gap: 1rem;
+    }
+
+    .header section a img {
+        height: 3rem; /* Reduz o tamanho do logo */
+    }
+
+    /* o menu de navegação será oculto em telas pequenas e terá um fundo transparente*/
+    #nav-menu{
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: rgba(1, 1, 3, 0.85);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 1rem;
+        border-top: var(--border);
+        z-index: 3;
+        transition: opacity 0.3s ease;
+    }
+
+    #nav-menu a {
+        color: white;
+        font-size: 1.4rem;
+        padding: 1rem;
+        text-align: center;
+        border-bottom: var(--border);
+    }
+
+    #nav-menu a:hover {
+        color: var(--main-color);
+        border-bottom: 0.1rem solid var(--main-color);
+    }
+
+    .menu-recolhivel {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 21px;
+        cursor: pointer;
+    }
+
+    .menu-recolhivel span {
+        background-color: white;
+        height: 4px;
+        width: 100%;
+        border-radius: 2px;
+    }
+
+    .header section nav {
+        display: flex;
+        flex-direction: column; /* Faz os itens de navegação ficarem empilhados */
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .header section nav a {
+        font-size: 1.4rem; /* Diminui o tamanho das fontes do menu */
+        color: white;
+        transition: 0.3s linear;
+        padding: 0.5rem 0;
+    }
+
+    .header section nav a:hover {
+        color: var(--main-color);
+        border-bottom: 0.1rem solid var(--main-color);
+    }
+
+    /* Ajuste no conteúdo principal (caixa-principal) para adaptar ao tamanho */
+    .caixa-principal div h3 {
+        font-size: 4rem; /* Ajusta o tamanho da fonte */
+    }
+
+    .caixa-principal div p {
+        font-size: 1.4rem; /* Diminui a fonte do texto */
+    }
+
+    .botao-link {
+        font-size: 1.4rem; /* Ajuste da fonte do botão */
+        padding: 1rem 2rem;
+    }
+
+    /* Ajustes na seção 'Sobre' */
+    .caixa-sobre .sobre-container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .caixa-sobre .sobre-container .sobre-imagem {
+        display: none; /* Oculta a imagem em telas pequenas */
+    }
+
+    .caixa-sobre .sobre-container .sobre-texto {
+        flex: 1;
+        padding: 2rem;
+    }
+
+    .caixa-sobre .sobre-container .sobre-texto h3 {
+        font-size: 2.5rem; /* Ajuste do tamanho do título */
+    }
+
+    .caixa-sobre .sobre-container .sobre-texto p {
+        font-size: 1.4rem;
+    }
+
+    /* Ajustes para o modal e mapa */
+    .modal {
+        width: 90%; /* Modal vai ocupar 90% da tela */
+        min-height: 250px; /* Altura mínima ajustada */
+    }
+
+    .modal iframe {
+        height: 70%; /* Ajusta o tamanho do iframe */
+    }
+    
+    .mascara-modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        visibility: hidden;
+        opacity: 1;
+        transition: visibility 0.3s, opacity 0.3s;
+    }
+}
