@@ -4,77 +4,181 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cafeteria com o melhor café da região. Venha experimentar nossos cafés especiais e desfrutar de um ambiente acolhedor.">
+    <meta name="keywords" content="café, cafeteria, café especial, café gourmet, melhor café">
+    <meta name="author" content="Sua Cafeteria">
+    <meta property="og:title" content="Cafeteria - O Melhor Café da Região">
+    <meta property="og:description" content="Experimente o melhor café da região em um ambiente acolhedor e sofisticado.">
+    <meta property="og:image" content="img/logo.png">
+    <meta property="og:url" content="https://www.suacafeteria.com">
+    <meta name="theme-color" content="#d3ad7f">
+    
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-        rel="stylesheet">
-    <title>Cafeteria</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <title>Cafeteria - O Melhor Café da Região</title>
 </head>
 
 <body>
-    <div class="caixa-video">
-        <video src="./videos/coffe.mp4" loop muted autoplay></video>
+    <!-- Vídeo de Fundo -->
+    <div class="caixa-video" aria-hidden="true">
+        <video src="./videos/coffe.mp4" loop muted autoplay playsinline></video>
         <div class="mascara"></div>
     </div>
 
+    <!-- Cabeçalho -->
     <header class="header">
-        <section>
-            <a href="#">
-                <img src="img/logo.png" alt="logo-cafeteria" />
+        <div class="container">
+            <a href="#" class="logo" aria-label="Página inicial da Cafeteria">
+                <img src="img/logo.png" alt="Logo Cafeteria">
             </a>
-            <nav id="nav-menu">
-                <a href="#">Home</a>
-                <a href="#">Sobre</a>
-                <a href="#">Avalições</a>
-                <a href="#" onclick="mostrarModal()">Endereço</a>
+            <nav aria-label="Navegação principal">
+                <button id="menu-recolher" class="menu-recolhivel" aria-expanded="false" aria-controls="nav-menu" aria-label="Abrir menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul id="nav-menu" class="nav-list">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#avaliacoes">Avaliações</a></li>
+                    <li><a href="#" onclick="mostrarModal()">Endereço</a></li>
+                </ul>
             </nav>
-            <div id="menu-recolher" class="menu-recolhivel" onclick="recolherMenu()" >
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </section>
+        </div>
     </header>
 
-    <div>
-        <section class="caixa-principal">
-            <div>
-                <h3>O Melhor Café Da Região</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime nam in eveniet! Doloribus quo blanditiis ipsa. Blanditiis velit atque et, unde autem inventore minus dolore temporibus iusto quod optio eum.</p>
-                <a class="botao-link">Pegue o seu agora</a>
-            </div>
-        </section>
-    </div>
+    <!-- Hero Section -->
+    <section id="home" class="caixa-principal">
+        <div class="container">
+            <h1>O Melhor Café Da Região</h1>
+            <p>Experimente nossos cafés especiais selecionados cuidadosamente de produtores sustentáveis. Uma experiência única para os amantes de café.</p>
+            <a href="#menu" class="botao-link">Conheça nosso menu</a>
+        </div>
+    </section>
 
-    <section class="caixa-sobre">
-        <h2 class="titulo"><span>Sobre</span> Nós</h2>
-        <div class="sobre-container">
-            <div class="sobre-imagem">
-                <img src="./img/about-img.jpeg" alt="Imagem sobre nós">
-            </div>
+    <!-- Sobre Section -->
+    <section id="sobre" class="caixa-sobre">
+        <div class="container">
+            <h2 class="titulo"><span>Sobre</span> Nós</h2>
+            <div class="sobre-container">
+                <div class="sobre-imagem" aria-label="Imagem de cafés especiais">
+                    <img src="./img/home-img.jpeg" alt="Cafés especiais preparados com carinho" width="600" height="400">
+                </div>
 
-            <div class="sobre-texto">
-                <h3>O que faz nosso café especial</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto ducimus ullam porro, atque ipsam voluptatem dolorem, aperiam magni corrupti quam ut! Nihil dolores cupiditate dolor! Ratione non perspiciatis ipsa ut.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus nostrum harum officia sunt, aliquid exercitationem nam quasi, corporis doloremque distinctio alias perferendis nesciunt assumenda. Inventore eveniet quam quisquam harum accusantium.</p>
-                <a class="botao-link">Saiba Mais</a>
+                <div class="sobre-texto">
+                    <h3>O que faz nosso café especial</h3>
+                    <p>Nossos grãos são cuidadosamente selecionados das melhores regiões produtoras, torrados artesanalmente em pequenos lotes para garantir frescor e qualidade inigualáveis.</p>
+                    <p>Trabalhamos com produtores que compartilham nossa paixão por café e nosso compromisso com práticas sustentáveis, garantindo um produto que é bom para você e para o planeta.</p>
+                    <a href="#" class="botao-link">Saiba Mais</a>
+                </div>
             </div>
         </div>
     </section>
 
-    <div class="modal">
-        <h3 class="titulo"><span>Nosso</span> Endereço</h3>
-        <iframe
+    <!-- Menu Section -->
+    <section id="menu" class="caixa-menu">
+        <div class="container">
+            <h2 class="titulo">Nosso <span>Menu</span></h2>
+            <div class="menu-container">
+                <div class="menu-item">
+                    <img src="img/menu-1.jpg" alt="Café expresso" width="100" height="100">
+                    <h3>Expresso Tradicional</h3>
+                    <div class="preco">R$ 8,90</div>
+                    <p>Nosso expresso clássico, intenso e com crema perfeita.</p>
+                </div>
+                
+                <div class="menu-item">
+                    <img src="img/menu-2.jpg" alt="Cappuccino" width="100" height="100">
+                    <h3>Cappuccino Cremoso</h3>
+                    <div class="preco">R$ 12,90</div>
+                    <p>Expresso com leite vaporizado e espuma de leite perfeita.</p>
+                </div>
+                
+                <div class="menu-item">
+                    <img src="img/menu-3.jpg" alt="Café filtrado" width="100" height="100">
+                    <h3>Pour Over</h3>
+                    <div class="preco">R$ 10,90</div>
+                    <p>Café filtrado manualmente, ressaltando notas frutadas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Avaliações Section -->
+    <section id="avaliacoes" class="caixa-avaliacoes">
+        <div class="container">
+            <h2 class="titulo">O Que Nossos <span>Clientes</span> Dizem</h2>
+            <div class="avaliacoes-container">
+                <div class="avaliacao-item">
+                    <div class="cliente-info">
+                        <img src="img/cliente-1.jpg" alt="Cliente Maria" width="60" height="60">
+                        <h3>Maria Silva</h3>
+                        <div class="estrelas">★★★★★</div>
+                    </div>
+                    <p>"O melhor café que já provei! Ambiente acolhedor e atendimento impecável."</p>
+                </div>
+                
+                <div class="avaliacao-item">
+                    <div class="cliente-info">
+                        <img src="img/cliente-2.jpg" alt="Cliente João" width="60" height="60">
+                        <h3>João Santos</h3>
+                        <div class="estrelas">★★★★☆</div>
+                    </div>
+                    <p>"Cappuccino incrível e os doces são divinos. Vale cada centavo!"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="rodape">
+        <div class="container">
+            <div class="rodape-conteudo">
+                <div class="rodape-logo">
+                    <img src="img/logo.png" alt="Logo Cafeteria">
+                    <p>Experiências únicas em cada xícara</p>
+                </div>
+                
+                <div class="rodape-contato">
+                    <h3>Contato</h3>
+                    <p>Email: contato@cafeteria.com</p>
+                    <p>Telefone: (61) 99999-9999</p>
+                </div>
+                
+                <div class="rodape-social">
+                    <h3>Redes Sociais</h3>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Cafeteria. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal de Endereço -->
+    <div class="modal" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
+        <button class="fechar-modal" onclick="esconderModal()" aria-label="Fechar modal">×</button>
+        <h2 id="modalTitle" class="titulo"><span>Nosso</span> Endereço</h2>
+        <iframe 
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3837.6136462095606!2d-48.09108532576142!3d-15.876890724990059!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935bd2b1023234e5%3A0x20fda6ce851afce0!2sSamambaia%20Norte%20-%20Samambaia%2C%20Bras%C3%ADlia%20-%20DF!5e0!3m2!1sen!2sbr!4v1730578105963!5m2!1sen!2sbr"
             width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
+            referrerpolicy="no-referrer-when-downgrade" title="Localização da Cafeteria"></iframe>
     </div>
 
     <div class="mascara-modal" onclick="esconderModal()"></div>
 
-    <script src="./scripts.js"></script>
+    <!-- Scripts -->
+    <script src="scripts.js" defer></script>
 </body>
 
 </html>
